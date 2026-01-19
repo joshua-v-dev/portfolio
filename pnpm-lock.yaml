@@ -4,116 +4,114 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-importers:
+dependencies:
+  '@heroicons/react':
+    specifier: ^2.1.1
+    version: 2.1.1(react@18.2.0)
+  '@react-three/fiber':
+    specifier: ^8.18.0
+    version: 8.18.0(react-dom@18.2.0)(react@18.2.0)(three@0.160.1)
+  '@vercel/analytics':
+    specifier: ^1.1.2
+    version: 1.1.2
+  classnames:
+    specifier: ^2.5.1
+    version: 2.5.1
+  clsx:
+    specifier: ^1.2.1
+    version: 1.2.1
+  date-fns:
+    specifier: ^2.30.0
+    version: 2.30.0
+  fast-glob:
+    specifier: ^3.3.2
+    version: 3.3.2
+  feed:
+    specifier: ^4.2.2
+    version: 4.2.2
+  framer-motion:
+    specifier: ^10.18.0
+    version: 10.18.0(react-dom@18.2.0)(react@18.2.0)
+  maath:
+    specifier: ^0.10.7
+    version: 0.10.7(@types/three@0.152.1)(three@0.160.1)
+  motion:
+    specifier: ^10.17.0
+    version: 10.17.0
+  next:
+    specifier: ^14.2.10
+    version: 14.2.10(react-dom@18.2.0)(react@18.2.0)
+  next-auth:
+    specifier: ^4.24.5
+    version: 4.24.5(next@14.2.10)(react-dom@18.2.0)(react@18.2.0)
+  next-themes:
+    specifier: ^0.2.1
+    version: 0.2.1(next@14.2.10)(react-dom@18.2.0)(react@18.2.0)
+  popmotion:
+    specifier: ^11.0.5
+    version: 11.0.5
+  react:
+    specifier: ^18.2.0
+    version: 18.2.0
+  react-dom:
+    specifier: ^18.2.0
+    version: 18.2.0(react@18.2.0)
+  sharp:
+    specifier: ^0.33.2
+    version: 0.33.3
+  swr:
+    specifier: ^2.2.4
+    version: 2.2.4(react@18.2.0)
+  three:
+    specifier: ^0.160.1
+    version: 0.160.1
 
-  .:
-    dependencies:
-      '@heroicons/react':
-        specifier: ^2.1.1
-        version: 2.1.1(react@18.2.0)
-      '@react-three/fiber':
-        specifier: ^8.15.15
-        version: 8.15.15(react-dom@18.2.0)(react@18.2.0)(three@0.160.1)
-      '@vercel/analytics':
-        specifier: ^1.1.2
-        version: 1.1.2
-      classnames:
-        specifier: ^2.5.1
-        version: 2.5.1
-      clsx:
-        specifier: ^1.2.1
-        version: 1.2.1
-      date-fns:
-        specifier: ^2.30.0
-        version: 2.30.0
-      fast-glob:
-        specifier: ^3.3.2
-        version: 3.3.2
-      feed:
-        specifier: ^4.2.2
-        version: 4.2.2
-      framer-motion:
-        specifier: ^10.18.0
-        version: 10.18.0(react-dom@18.2.0)(react@18.2.0)
-      maath:
-        specifier: ^0.10.7
-        version: 0.10.7(@types/three@0.152.1)(three@0.160.1)
-      motion:
-        specifier: ^10.17.0
-        version: 10.17.0
-      next:
-        specifier: ^14.2.10
-        version: 14.2.10(react-dom@18.2.0)(react@18.2.0)
-      next-auth:
-        specifier: ^4.24.5
-        version: 4.24.5(next@14.2.10)(react-dom@18.2.0)(react@18.2.0)
-      next-themes:
-        specifier: ^0.2.1
-        version: 0.2.1(next@14.2.10)(react-dom@18.2.0)(react@18.2.0)
-      popmotion:
-        specifier: ^11.0.5
-        version: 11.0.5
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-      sharp:
-        specifier: ^0.33.2
-        version: 0.33.3
-      swr:
-        specifier: ^2.2.4
-        version: 2.2.4(react@18.2.0)
-      three:
-        specifier: ^0.160.1
-        version: 0.160.1
-    devDependencies:
-      '@tailwindcss/aspect-ratio':
-        specifier: ^0.4.2
-        version: 0.4.2(tailwindcss@3.4.1)
-      '@tailwindcss/forms':
-        specifier: ^0.5.7
-        version: 0.5.7(tailwindcss@3.4.1)
-      '@tailwindcss/line-clamp':
-        specifier: ^0.4.4
-        version: 0.4.4(tailwindcss@3.4.1)
-      '@tailwindcss/typography':
-        specifier: ^0.5.10
-        version: 0.5.10(tailwindcss@3.4.1)
-      '@types/node':
-        specifier: ^18.19.10
-        version: 18.19.10
-      '@types/react':
-        specifier: ^18.2.48
-        version: 18.2.48
-      '@types/three':
-        specifier: ^0.152.1
-        version: 0.152.1
-      autoprefixer:
-        specifier: ^10.4.17
-        version: 10.4.17(postcss@8.4.33)
-      eslint:
-        specifier: ^8.56.0
-        version: 8.56.0
-      eslint-config-next:
-        specifier: ^13.5.6
-        version: 13.5.6(eslint@8.56.0)(typescript@5.3.3)
-      postcss:
-        specifier: ^8.4.33
-        version: 8.4.33
-      prettier:
-        specifier: ^2.8.8
-        version: 2.8.8
-      prettier-plugin-tailwindcss:
-        specifier: ^0.2.8
-        version: 0.2.8(prettier@2.8.8)
-      tailwindcss:
-        specifier: ^3.4.1
-        version: 3.4.1
-      typescript:
-        specifier: ^5.3.3
-        version: 5.3.3
+devDependencies:
+  '@tailwindcss/aspect-ratio':
+    specifier: ^0.4.2
+    version: 0.4.2(tailwindcss@3.4.1)
+  '@tailwindcss/forms':
+    specifier: ^0.5.7
+    version: 0.5.7(tailwindcss@3.4.1)
+  '@tailwindcss/line-clamp':
+    specifier: ^0.4.4
+    version: 0.4.4(tailwindcss@3.4.1)
+  '@tailwindcss/typography':
+    specifier: ^0.5.10
+    version: 0.5.10(tailwindcss@3.4.1)
+  '@types/node':
+    specifier: ^18.19.10
+    version: 18.19.10
+  '@types/react':
+    specifier: ^18.2.48
+    version: 18.2.48
+  '@types/three':
+    specifier: ^0.152.1
+    version: 0.152.1
+  autoprefixer:
+    specifier: ^10.4.17
+    version: 10.4.17(postcss@8.4.33)
+  eslint:
+    specifier: ^8.56.0
+    version: 8.56.0
+  eslint-config-next:
+    specifier: ^13.5.6
+    version: 13.5.6(eslint@8.56.0)(typescript@5.3.3)
+  postcss:
+    specifier: ^8.4.33
+    version: 8.4.33
+  prettier:
+    specifier: ^2.8.8
+    version: 2.8.8
+  prettier-plugin-tailwindcss:
+    specifier: ^0.2.8
+    version: 0.2.8(prettier@2.8.8)
+  tailwindcss:
+    specifier: ^3.4.1
+    version: 3.4.1
+  typescript:
+    specifier: ^5.3.3
+    version: 5.3.3
 
 packages:
 
@@ -617,15 +615,15 @@ packages:
     dev: true
     optional: true
 
-  /@react-three/fiber@8.15.15(react-dom@18.2.0)(react@18.2.0)(three@0.160.1):
-    resolution: {integrity: sha512-Z5POnzgpYxrgnYuiCv+8t7lpynEcGcn0/323kV1NtE7Cwq16aMqEuC6nF2Y/tK+crJpKNEqsRtvng/eJy0xxOA==}
+  /@react-three/fiber@8.18.0(react-dom@18.2.0)(react@18.2.0)(three@0.160.1):
+    resolution: {integrity: sha512-FYZZqD0UUHUswKz3LQl2Z7H24AhD14XGTsIRw3SJaXUxyfVMi+1yiZGmqTcPt/CkPpdU7rrxqcyQ1zJE5DjvIQ==}
     peerDependencies:
       expo: '>=43.0'
       expo-asset: '>=8.4'
       expo-file-system: '>=11.0'
       expo-gl: '>=11.0'
-      react: '>=18.0'
-      react-dom: '>=18.0'
+      react: '>=18 <19'
+      react-dom: '>=18 <19'
       react-native: '>=0.64'
       three: '>=0.133'
     peerDependenciesMeta:
@@ -651,7 +649,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-reconciler: 0.27.0(react@18.2.0)
-      react-use-measure: 2.1.1(react-dom@18.2.0)(react@18.2.0)
+      react-use-measure: 2.1.7(react-dom@18.2.0)(react@18.2.0)
       scheduler: 0.21.0
       suspend-react: 0.1.3(react@18.2.0)
       three: 0.160.1
@@ -1206,10 +1204,6 @@ packages:
     engines: {node: '>=0.11'}
     dependencies:
       '@babel/runtime': 7.23.9
-    dev: false
-
-  /debounce@1.2.1:
-    resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
     dev: false
 
   /debug@3.2.7:
@@ -2934,13 +2928,15 @@ packages:
       scheduler: 0.21.0
     dev: false
 
-  /react-use-measure@2.1.1(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-nocZhN26cproIiIduswYpV5y5lQpSQS1y/4KuvUCjSKmw7ZWIS/+g3aFnX3WdBkyuGUtTLif3UTqnLLhbDoQig==}
+  /react-use-measure@2.1.7(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-KrvcAo13I/60HpwGO5jpW7E9DfusKyLPLvuHlUyP5zqnmAPhNc6qTRjUQrdTADl0lpPpDVU2/Gg51UlOGHXbdg==}
     peerDependencies:
       react: '>=16.13'
       react-dom: '>=16.13'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
     dependencies:
-      debounce: 1.2.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
