@@ -34,5 +34,8 @@ npm-debug.log*
 .env.test.local
 .env.production.local
 
+# typescript
+tsconfig.tsbuildinfo
+
 # vercel
 .vercel
