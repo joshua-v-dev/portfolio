@@ -11,8 +11,7 @@ type HeaderProps = {
 export const headerData: HeaderProps = {
   title: " Digital Solutions",
   subtitle: "Software Development & Consulting",
-  description:
-    "Available for freelance engagements and full-time roles.",
+  description: "Available for freelance engagements and full-time roles.",
 };
 const Header = () => {
   return (

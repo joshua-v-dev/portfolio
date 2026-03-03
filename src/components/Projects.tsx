@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
-
-import { SimpleLayout } from "../components/SimpleLayout";
 import { people } from "~/lib/constants";
+import { SimpleLayout } from "../components/SimpleLayout";
 
 export default function Projects() {
   return (

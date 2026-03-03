@@ -1,9 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import {
-  primaryFeatures,
-  secondaryFeatures,
-} from "~/lib/constants";
+import { primaryFeatures, secondaryFeatures } from "~/lib/constants";
 
 const FutureMain = () => {
   return (
@@ -94,8 +91,8 @@ const FutureMain = () => {
                   <span className="block text-indigo-600">is here.</span>
                 </h2>
                 <p className="pt-6 text-lg leading-8 text-gray-300">
-                  Every day, I'm pushing the boundaries of what's possible
-                  with the latest technologies.
+                  Every day, I'm pushing the boundaries of what's possible with
+                  the latest technologies.
                 </p>
               </div>
               <Image
@@ -178,10 +175,10 @@ const FutureMain = () => {
               Get notified when I'm launching.
             </h2>
             <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 text-gray-300">
-              I'm working hard to ship the first version of my product. If
-              you sign up now, you'll be one of the first to know when it's
-              ready. I'll also keep you up to date on progress behind the
-              scenes and early access.
+              I'm working hard to ship the first version of my product. If you
+              sign up now, you'll be one of the first to know when it's ready.
+              I'll also keep you up to date on progress behind the scenes and
+              early access.
             </p>
             <form className="mx-auto mt-10 flex max-w-md gap-x-4">
               <label htmlFor="email-address" className="sr-only">
