@@ -6,6 +6,7 @@ import {
   UsersIcon,
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
+import Link from "next/link";
 
 const primaryFeatures = [
   {
@@ -177,14 +178,6 @@ const Recruiter = () => {
                   </dt>
                   <dd className="mt-1 flex flex-auto flex-col text-base leading-7 text-gray-300">
                     <p className="flex-auto">{feature.description}</p>
-                    <p className="mt-6">
-                      <a
-                        href={feature.href}
-                        className="text-sm font-semibold leading-6 text-accent-5"
-                      >
-                        Learn more <span aria-hidden="true">→</span>
-                      </a>
-                    </p>
                   </dd>
                 </div>
               ))}
@@ -285,18 +278,12 @@ const Recruiter = () => {
                 from you.
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
-                <a
-                  href="#"
+                <Link
+                  href="/contract"
                   className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   Get started
-                </a>
-                <a
-                  href="#"
-                  className="text-sm font-semibold leading-6 text-white"
-                >
-                  Learn more <span aria-hidden="true">→</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
