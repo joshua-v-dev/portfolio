@@ -2,7 +2,7 @@ import cn from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import useDelayedRender from "src/lib/useDelayedRender";
+import useDelayedRender from "~/lib/useDelayedRender";
 import { CrossIcon, MenuIcon } from "~/lib/icons";
 
 const MobileMenu = ({ href }: { href?: string }) => {
