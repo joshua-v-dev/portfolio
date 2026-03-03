@@ -1,17 +1,20 @@
-# Joshua's Portfolio — Next.js 14
+# Joshua's Portfolio — Next.js 16
 
 ## Commands
 - Dev: `pnpm dev`
-- Build: `pnpm build`
-- Lint: `pnpm lint`
-- Format: `pnpm format` (Prettier with tailwindcss plugin)
+- Build: `pnpm build` (Turbopack)
+- Lint: `pnpm lint` (Biome)
+- Format: `pnpm format` (Biome)
 - Type-check: `pnpm type-check` (tsc --noEmit)
+- Test: `pnpm test` (Vitest)
 - Analyze bundle: `pnpm analyze`
 
 ## Architecture
-- **Framework**: Next.js 14 with **Pages Router** (NOT App Router)
+- **Framework**: Next.js 16 with **Pages Router** (NOT App Router)
+- **Bundler**: Turbopack (default in Next.js 16)
 - **Pages**: `src/pages/` — index, portfolio, services, pricing, gallery, contract, future, recruiter, products, 404
 - **Components**: `src/components/` — 42 components (see list below)
+- **Proxy**: `src/proxy.ts` (was middleware.ts — renamed in Next.js 16)
 - **Path alias**: `~/` maps to `src/` (tsconfig paths)
 - **Package manager**: pnpm
 
@@ -19,7 +22,7 @@
 Strict is enabled with extra checks:
 - `noUncheckedIndexedAccess`, `noUnusedLocals`, `noUnusedParameters`
 - `noImplicitReturns`, `noFallthroughCasesInSwitch`
-- Target: ES2022, Module: esnext
+- Target: ES2022, Module: esnext, JSX: react-jsx
 
 ## Styling
 - Tailwind CSS 3.4 with plugins: typography, forms, aspect-ratio, line-clamp
@@ -27,16 +30,15 @@ Strict is enabled with extra checks:
 - Accent colors: accent-1 through accent-7
 - Custom breakpoints up to 7xl (6400px)
 - Custom `.container` and `.btn` utilities defined in tailwind plugin
-- Prettier plugin sorts Tailwind classes automatically
+- Biome handles formatting (no Tailwind class sorting — may add later)
 
 ## 3D & Animation
-- Three.js via `@react-three/fiber` for 3D elements
-- Framer Motion (`framer-motion` + `motion`) for page transitions and animations
+- Three.js via `@react-three/fiber` v9 for 3D elements
+- Framer Motion v11 for page transitions and animations
 - `popmotion` for animation utilities
 - `maath` for math helpers in 3D scenes
 
 ## Key Dependencies
-- next-auth for authentication
 - next-themes for dark/light mode
 - swr for data fetching
 - sharp for image optimization
@@ -46,7 +48,7 @@ Strict is enabled with extra checks:
 - @vercel/analytics for analytics
 
 ## Images
-- Cloudinary, Unsplash, TailwindUI domains allowed in next.config
+- Cloudinary, Unsplash, TailwindUI domains allowed via `remotePatterns` in next.config
 - SVG allowed (`dangerouslyAllowSVG: true`)
 - Use next/image with sharp optimization
 
