@@ -1,6 +1,12 @@
 import Image from "next/image";
+import { useEntrance } from "~/hooks";
 
 const ContractHero = () => {
+  const entranceRef = useEntrance<HTMLDivElement>({
+    delay: 100,
+    duration: 800,
+  });
+
   return (
     <div className="bg-transparent">
       <div className="relative isolate overflow-hidden bg-transparent">
@@ -23,7 +29,7 @@ const ContractHero = () => {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-36">
+        <div ref={entranceRef} className="mx-auto max-w-2xl py-36">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-indigo-600 sm:text-6xl">
               <span className="block xl:inline">

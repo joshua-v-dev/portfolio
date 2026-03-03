@@ -1,6 +1,14 @@
+import { useScrollReveal } from "~/hooks";
+
 const FormBlock = () => {
+  const revealRef = useScrollReveal<HTMLDivElement>({
+    direction: "up",
+    duration: 700,
+    distance: 35,
+  });
+
   return (
-    <div className="relative isolate bg-transparent">
+    <div ref={revealRef} className="relative isolate bg-transparent">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2">
         <div className="lg:py-38 relative px-6 pb-10 pt-14 lg:static lg:px-8">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">

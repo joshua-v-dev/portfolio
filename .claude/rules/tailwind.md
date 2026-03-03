@@ -6,7 +6,7 @@ globs: "**/*.tsx,**/*.css"
 
 ## Setup
 - Tailwind CSS 3.4 with plugins: typography, forms, aspect-ratio, line-clamp
-- Prettier plugin auto-sorts Tailwind classes
+- Biome handles formatting (no Tailwind class sorting — may add later)
 
 ## Theming
 - Custom CSS variables: `--primary`, `--secondary`, `--neutralBg`, `--primaryBg`
@@ -21,4 +21,4 @@ globs: "**/*.tsx,**/*.css"
 - Use Tailwind utility classes exclusively, avoid custom CSS
 - Use `classnames` or `clsx` for conditional class composition
 - Always include responsive breakpoints for layout components
-- Use Framer Motion for animations, not CSS transitions or Tailwind animate
+- Use Web Animations API hooks (`~/hooks`) for animations, not CSS transitions or Tailwind animate

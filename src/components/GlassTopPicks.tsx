@@ -1,9 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { FunctionComponentElement } from "react";
+import { useStaggerReveal } from "~/hooks";
 import { topPicks } from "~/lib/constants";
 
 const GlassTopPicks = () => {
+  const staggerRef = useStaggerReveal<HTMLDivElement>({
+    staggerDelay: 150,
+    distance: 40,
+  });
+
   return (
     <section id="main-content" className="z-10000 mx-auto grid max-w-4xl p-3">
       <div className="grid items-center justify-center p-3 ">
@@ -20,7 +26,10 @@ const GlassTopPicks = () => {
       </div>
 
       <div className="mx-auto grid items-center justify-center p-8">
-        <div className="p-15 mx-auto grid max-w-4xl gap-x-8 gap-y-4 bg-transparent shadow-indigo-600 sm:grid-flow-col lg:grid-cols-3">
+        <div
+          ref={staggerRef}
+          className="p-15 mx-auto grid max-w-4xl gap-x-8 gap-y-4 bg-transparent shadow-indigo-600 sm:grid-flow-col lg:grid-cols-3"
+        >
           {topPicks.map(
             (topPicks, i): FunctionComponentElement<PageTransitionEvent> => (
               <div

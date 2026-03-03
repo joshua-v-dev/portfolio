@@ -1,8 +1,14 @@
 import Image from "next/image";
 import type { ReactElement } from "react";
+import { useStaggerReveal } from "~/hooks";
 import { TimeLineData } from "~/lib/constants";
 
 export default function Timeline() {
+  const staggerRef = useStaggerReveal<HTMLDListElement>({
+    staggerDelay: 100,
+    distance: 25,
+  });
+
   return (
     <div className=" grid gap-x-10 gap-y-10 space-x-7 space-y-7 sm:px-6 sm:py-32 lg:grid-cols-2">
       <div className=" grid space-x-5 space-y-5">
@@ -14,7 +20,10 @@ export default function Timeline() {
           about my future.
         </p>
 
-        <dl className="max- grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8">
+        <dl
+          ref={staggerRef}
+          className="max- grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8"
+        >
           {TimeLineData.map(
             (TimeLineData, i): ReactElement => (
               <div key={i} className="grid-col grid">

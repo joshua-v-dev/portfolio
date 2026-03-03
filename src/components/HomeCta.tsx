@@ -1,11 +1,20 @@
 import Link from "next/link";
+import { useScrollReveal } from "~/hooks";
 
 const HomeCta = () => {
+  const revealRef = useScrollReveal<HTMLElement>({
+    direction: "up",
+    duration: 700,
+  });
+
   return (
-    <section className="mx-auto flex max-w-4xl items-center justify-center p-3 ">
+    <section
+      ref={revealRef}
+      className="mx-auto flex max-w-4xl items-center justify-center p-3 "
+    >
       <div
         className="border-shadow-2 mx-auto grid items-center justify-center rounded-xl border border-indigo-600 border-opacity-90 bg-black/30
-                     object-cover p-2 shadow-indigo-600 outline-2 
+                     object-cover p-2 shadow-indigo-600 outline-2
                     outline-offset-2 outline-black brightness-125 backdrop-blur-sm"
       >
         <div className=" rounded-3xl bg-transparent">

@@ -1,4 +1,11 @@
+import { useStaggerReveal } from "~/hooks";
+
 export default function Acomplishments() {
+  const staggerRef = useStaggerReveal<HTMLDivElement>({
+    staggerDelay: 120,
+    distance: 30,
+  });
+
   return (
     <>
       <h2 className="tracking-loose font-extrabold uppercase leading-loose text-indigo-700  brightness-125 sm:text-4xl lg:text-7xl ">
@@ -6,7 +13,7 @@ export default function Acomplishments() {
       </h2>
       <section className="gap-10 p-4">
         <div className="grid-col-3 mx-auto grid gap-20 ">
-          <div className="  flex flex-wrap gap-y-24">
+          <div ref={staggerRef} className="  flex flex-wrap gap-y-24">
             <div className="  md:w-1/2 lg:w-1/3">
               <div className="flex ">
                 <span className="mx-auto">

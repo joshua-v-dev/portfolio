@@ -1,8 +1,12 @@
 import { CheckIcon } from "@heroicons/react/20/solid";
+import { useStaggerReveal } from "~/hooks";
 import { classNames, tiers } from "~/lib/constants";
 
 const Services = () => {
-  // const [frequency, setFrequency] = useState(frequencies[0]);
+  const staggerRef = useStaggerReveal<HTMLDivElement>({
+    staggerDelay: 150,
+    distance: 40,
+  });
 
   return (
     <section
@@ -12,7 +16,10 @@ const Services = () => {
       <div className="mx-auto py-3 bg-transparent">
         {/* Pricing section */}
         <div className="max-w-7xl mx-auto bg-transparent ">
-          <div className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <div
+            ref={staggerRef}
+            className="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3"
+          >
             {tiers.map((tier) => (
               <div
                 key={tier.id}
@@ -39,14 +46,6 @@ const Services = () => {
                 <p className="mt-6 text-sm leading-6 text-gray-300">
                   {tier.description}
                 </p>
-                {/* <p className="mt-6 flex items-baseline gap-x-1">
-                    <span className="text-4xl font-bold tracking-tight text-white">
-                      {tier.price[frequency ? "monthly" : "yearly"]}
-                    </span>
-                    <span className="text-sm font-semibold leading-6 text-gray-300">
-                      {frequency?.priceSuffix}
-                    </span>
-                  </p> */}
                 <a
                   href={tier.href}
                   aria-describedby={tier.id}

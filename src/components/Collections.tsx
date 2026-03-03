@@ -1,7 +1,13 @@
 import Image from "next/image";
+import { useStaggerReveal } from "~/hooks";
 import { people } from "~/lib/constants";
 
 const Collections = () => {
+  const staggerRef = useStaggerReveal<HTMLUListElement>({
+    staggerDelay: 120,
+    distance: 35,
+  });
+
   return (
     <div className="bg-transparent py-24 md:py-32 lg:py-20">
       <div className="z-100 max-w-7xl mx-auto grid grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
@@ -17,6 +23,7 @@ const Collections = () => {
           </p>
         </div>
         <ul
+          ref={staggerRef}
           role="list"
           className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-20 lg:grid-cols-3 lg:mx-0 lg:max-w-none lg:gap-x-8 xl:col-span-2"
         >

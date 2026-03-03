@@ -1,12 +1,18 @@
 import Link from "next/link";
+import { useEntrance } from "~/hooks";
 
 const FutureHero = () => {
+  const entranceRef = useEntrance<HTMLDivElement>({
+    delay: 100,
+    duration: 800,
+  });
+
   return (
     <div className="-z-50 bg-[url('/images/heroBg6.svg')] lg:max-w-none">
       <div className="relative isolate overflow-hidden ">
         <div className="max-w-7xl mx-auto pb-14 pt-10 sm:pb-12 lg:grid lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:py-20">
           <div className="px-6 lg:px-0 lg:pt-4">
-            <div className="mx-auto max-w-2xl">
+            <div ref={entranceRef} className="mx-auto max-w-2xl">
               <div className="max-w-lg">
                 <div className="mt-24 sm:mt-32 lg:mt-16">
                   <span className="inline-flex space-x-6">

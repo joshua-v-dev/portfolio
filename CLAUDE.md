@@ -13,7 +13,8 @@
 - **Framework**: Next.js 16 with **Pages Router** (NOT App Router)
 - **Bundler**: Turbopack (default in Next.js 16)
 - **Pages**: `src/pages/` — index, portfolio, services, pricing, gallery, contract, future, recruiter, products, 404
-- **Components**: `src/components/` — 42 components (see list below)
+- **Components**: `src/components/` — 38 components (see list below)
+- **Hooks**: `src/hooks/` — reusable animation hooks (Web Animations API)
 - **Proxy**: `src/proxy.ts` (was middleware.ts — renamed in Next.js 16)
 - **Path alias**: `~/` maps to `src/` (tsconfig paths)
 - **Package manager**: pnpm
@@ -33,10 +34,18 @@ Strict is enabled with extra checks:
 - Biome handles formatting (no Tailwind class sorting — may add later)
 
 ## 3D & Animation
-- Three.js via `@react-three/fiber` v9 for 3D elements
-- Framer Motion v11 for page transitions and animations
-- `popmotion` for animation utilities
+- Three.js v0.183 via `@react-three/fiber` v9 for 3D elements (WebGPU-capable, WebGL fallback)
+- Web Animations API via custom hooks (`useEntrance`, `useScrollReveal`, `useStaggerReveal`)
+- View Transitions API for page transitions (feature-detected, graceful fallback)
 - `maath` for math helpers in 3D scenes
+- All animations respect `prefers-reduced-motion`
+
+## Animation Hooks (src/hooks/)
+| Hook | Purpose |
+|------|---------|
+| `useEntrance` | Mount-time fade + scale animation |
+| `useScrollReveal` | IntersectionObserver + element.animate() for scroll-triggered reveals |
+| `useStaggerReveal` | Staggered children animation on scroll |
 
 ## Key Dependencies
 - next-themes for dark/light mode
@@ -54,11 +63,11 @@ Strict is enabled with extra checks:
 
 ## Components (src/components/)
 Acomplishments, ArticleDate, Button, CallToAction, Card, CardContainer,
-Collections, Component, Container, ContractHero, Divider, Dot, Element,
+Collections, Component, Container, ContractHero, Divider, Dot,
 ErrorMessage, Footer, Form, FormBlock, FutureHero, FutureMain, GlassTopPicks,
-Header, HomeCta, HomeHero, Keyboard, LightDarkMode, LoadingSpinner,
-MobileMenu, Nav, NowPlaying, Products, Projects, Prose, Recruiter, Refresh,
-SectionWrapper, Services, SimpleLayout, SlideShow, SuccessMessage,
+Header, HeroScene, HomeCta, HomeHero, Keyboard, LightDarkMode, LoadingSpinner,
+MobileMenu, Nav, Products, Projects, Prose, Recruiter,
+Services, SimpleLayout, SuccessMessage,
 Technologies, ThemeTemplate, TimeLine
 
 ## Conventions
@@ -66,6 +75,6 @@ Technologies, ThemeTemplate, TimeLine
 - Import with `~/` alias, not relative paths
 - Components are PascalCase single files in src/components/
 - Use Tailwind utility classes exclusively, avoid custom CSS
-- Use Framer Motion for animations, not CSS transitions
+- Use Web Animations API hooks (`~/hooks`) for animations, not CSS transitions
 - Wrap pages with ThemeTemplate layout
-- Use SectionWrapper and Container for consistent page structure
+- Use Container for consistent page structure

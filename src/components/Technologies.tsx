@@ -1,6 +1,12 @@
+import { useStaggerReveal } from "~/hooks";
 import { features } from "~/lib/constants";
 
 export default function Technologies() {
+  const staggerRef = useStaggerReveal<HTMLDListElement>({
+    staggerDelay: 100,
+    distance: 25,
+  });
+
   return (
     <div className="mx-auto grid  grid-flow-row bg-transparent">
       <div className="mx-auto   sm:px-4 ">
@@ -17,7 +23,10 @@ export default function Technologies() {
           </p>
 
           <div className="grid grid-flow-row ">
-            <dl className=" grid grid-cols-2  gap-x-8 gap-y-8  ">
+            <dl
+              ref={staggerRef}
+              className=" grid grid-cols-2  gap-x-8 gap-y-8  "
+            >
               {features.map((feature) => (
                 <div key={feature.id} className="relative  ">
                   <dt>
