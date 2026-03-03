@@ -12,13 +12,6 @@
   }
 }
 
-@layer base {
-  @layer utilities dark {
-    html {
-      @layer dark;
-    }
-  }
-}
 
 ::selection {
   background-color: #47a3f3;
@@ -31,7 +24,7 @@ html {
 }
 
 #__next {
-  @layer bg-transparent dark: bg-transparent;
+  @apply bg-transparent dark:bg-transparent;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -51,7 +44,7 @@ html {
 }
 
 .skip-nav {
-  @layer absolute -left-1/4 -top-8 -translate-y-12 transform px-4 py-3 transition-transform duration-200 focus: top-4 focus:translate-y-3;
+  @apply absolute -left-1/4 -top-8 -translate-y-12 transform px-4 py-3 transition-transform duration-200 focus:top-4 focus:translate-y-3;
 }
 
 #skip {
@@ -84,7 +77,7 @@ html {
 }
 
 .prose .anchor:after {
-  @layer text-gray-300 dark: text-gray-700;
+  @apply text-gray-300 dark:text-gray-700;
   content: "#";
 }
 
@@ -93,15 +86,15 @@ html {
 }
 
 .prose pre {
-  @layer border border-gray-200 bg-gray-50 dark: border-gray-700 dark:bg-gray-900;
+  @apply border border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-900;
 }
 
 .prose code {
-  @layer rounded-lg border border-gray-100 bg-gray-100 px-1 py-0.5 text-gray-800 dark: border-gray-800 dark:bg-gray-900 dark:text-gray-200;
+  @apply rounded-lg border border-gray-100 bg-gray-100 px-1 py-0.5 text-gray-800 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-200;
 }
 
 .prose pre code {
-  @layer p-0 text-gray-800 dark: text-gray-200;
+  @apply p-0 text-gray-800 dark:text-gray-200;
   border: initial;
 }
 
@@ -120,11 +113,11 @@ html {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  @layer text-gray-700 dark: text-gray-300;
+  @apply text-gray-700 dark:text-gray-300;
 }
 
 .token.punctuation {
-  @layer text-gray-700 dark: text-gray-300;
+  @apply text-gray-700 dark:text-gray-300;
 }
 
 .token.property,
@@ -173,7 +166,7 @@ html {
 
 code[class*="language-"],
 pre[class*="language-"] {
-  @layer text-gray-800 dark: text-gray-50;
+  @apply text-gray-800 dark:text-gray-50;
 }
 
 pre::-webkit-scrollbar {
@@ -188,7 +181,7 @@ pre {
 }
 
 .rehype-code-title {
-  @layer rounded-t-lg border border-b-0 border-gray-200 bg-gray-200 px-5 py-3 font-mono text-sm font-bold text-gray-800 dark: border-gray-700 dark:bg-gray-800 dark:text-gray-200;
+  @apply rounded-t-lg border border-b-0 border-gray-200 bg-gray-200 px-5 py-3 font-mono text-sm font-bold text-gray-800 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-200;
 }
 
 .rehype-code-title + pre {
@@ -196,7 +189,7 @@ pre {
 }
 
 .highlight-line {
-  @layer -mx-4 block border-l-4 border-blue-500 bg-gray-100 px-4 dark: bg-gray-800;
+  @apply -mx-4 block border-l-4 border-blue-500 bg-gray-100 px-4 dark:bg-gray-800;
 }
 
 /* Remove Safari input shadow on mobile */

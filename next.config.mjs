@@ -4,11 +4,11 @@ const config = {
 
   images: {
     dangerouslyAllowSVG: true,
-    domains: [
-      "res.cloudinary.com",
-      "localhost",
-      "images.unsplash.com",
-      "tailwindui.com",
+    remotePatterns: [
+      { protocol: "https", hostname: "res.cloudinary.com" },
+      { protocol: "http", hostname: "localhost" },
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "tailwindui.com" },
     ],
   },
 };
