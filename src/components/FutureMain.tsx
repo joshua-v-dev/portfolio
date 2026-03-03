@@ -1,12 +1,6 @@
-import { ChevronRightIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import Link from "next/link";
-// import { Key } from "react"
-import {
-  // classNames,
-  primaryFeatures,
-  secondaryFeatures,
-} from "~/lib/constants";
+import { primaryFeatures, secondaryFeatures } from "~/lib/constants";
 
 const FutureMain = () => {
   return (
@@ -17,22 +11,10 @@ const FutureMain = () => {
           <div className="max-w-7xl mx-auto px-6 py-4 sm:py-12 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-10">
             <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
               <div className="flex">
-                <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-300 ring-1 ring-gray-200/10 hover:ring-gray-50/20">
+                <div className="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-300 ring-1 ring-gray-200/10">
                   <span className="font-semibold text-indigo-200">
                     Coming soon
                   </span>
-                  <span
-                    className="h-4 w-px bg-transparent"
-                    aria-hidden="true"
-                  />
-                  <a href="#" className="flex items-center gap-x-1">
-                    <span className="absolute inset-0" aria-hidden="true" />
-                    <span>Learn more</span>
-                    <ChevronRightIcon
-                      className="-mr-2 h-5 w-5 text-gray-400"
-                      aria-hidden="true"
-                    />
-                  </a>
                 </div>
               </div>
               <h1 className="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-100 sm:text-6xl">
@@ -109,8 +91,8 @@ const FutureMain = () => {
                   <span className="block text-indigo-600">is here.</span>
                 </h2>
                 <p className="pt-6 text-lg leading-8 text-gray-300">
-                  Every day, we're pushing the boundaries of what's possible
-                  with the latest technologies.
+                  Every day, I'm pushing the boundaries of what's possible with
+                  the latest technologies.
                 </p>
               </div>
               <Image
@@ -162,7 +144,7 @@ const FutureMain = () => {
               All-in-one platform for your business needs.
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-200">
-              We're building the future of work, where anyone can work on
+              I'm building the future of work, where anyone can work on
               anything.
             </p>
           </div>
@@ -179,14 +161,6 @@ const FutureMain = () => {
                   </dt>
                   <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-200">
                     <p className="flex-auto">{feature.description}</p>
-                    <p className="pt-6">
-                      <a
-                        href={feature.href}
-                        className="text-sm font-semibold leading-6 text-indigo-200"
-                      >
-                        Learn more <span aria-hidden="true">→</span>
-                      </a>
-                    </p>
                   </dd>
                 </div>
               ))}
@@ -198,13 +172,13 @@ const FutureMain = () => {
         <div className="max-w-7xl mx-auto mt-12 sm:mt-26 sm:px-6 lg:px-8">
           <div className="relative isolate overflow-hidden bg-transparent px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:py-32">
             <h2 className="mx-auto max-w-2xl text-center text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Get notified when we're launching.
+              Get notified when I'm launching.
             </h2>
             <p className="mx-auto mt-2 max-w-xl text-center text-lg leading-8 text-gray-300">
-              We're working hard to ship the first version of our product. If
-              you sign up now, you'll be one of the first to know when it's
-              ready. We'll also keep you up to date on progress behind the
-              scenes and early access.
+              I'm working hard to ship the first version of my product. If you
+              sign up now, you'll be one of the first to know when it's ready.
+              I'll also keep you up to date on progress behind the scenes and
+              early access.
             </p>
             <form className="mx-auto mt-10 flex max-w-md gap-x-4">
               <label htmlFor="email-address" className="sr-only">

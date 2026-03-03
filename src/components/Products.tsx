@@ -20,7 +20,7 @@ const Products = () => {
                 The quickest way to get started with your new business idea.
               </h1>
               <p className="font-base text-md leading-7 text-gray-200">
-                We have a range of templates and themes to choose from.
+                I have a range of templates and themes to choose from.
               </p>
             </div>
           </div>
@@ -64,7 +64,7 @@ const Products = () => {
                     <strong className="font-semibold text-gray-400">
                       Security and Backups
                     </strong>{" "}
-                    We take security seriously. We also backup your site daily
+                    I take security seriously. I also backup your site daily
                     with feature add-on.
                   </span>
                 </li>
@@ -77,8 +77,8 @@ const Products = () => {
                     <strong className="font-semibold text-gray-400">
                       Hosting
                     </strong>{" "}
-                    We host your site for you. No need to worry about hosting.
-                    After 1 year, you can renew your hosting with us or move
+                    I host your site for you. No need to worry about hosting.
+                    After 1 year, you can renew your hosting with me or move
                     your site to another host.
                   </span>
                 </li>
@@ -91,7 +91,7 @@ const Products = () => {
                 Support and Maintenance
               </h2>
               <p className="pt-6">
-                We offer support and maintenance for your site. We can also help
+                I offer support and maintenance for your site. I can also help
                 you with your marketing and SEO.
               </p>
             </div>

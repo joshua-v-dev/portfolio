@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type HeaderProps = {
   children?: React.ReactNode;
@@ -10,8 +11,7 @@ type HeaderProps = {
 export const headerData: HeaderProps = {
   title: " Digital Solutions",
   subtitle: "Software Development & Consulting",
-  description:
-    "I have partnered with the freelancers platform upwork to provide you with the best service.",
+  description: "Available for freelance engagements and full-time roles.",
 };
 const Header = () => {
   return (
@@ -47,18 +47,12 @@ const Header = () => {
               {headerData.description}
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-              <a
-                href="#"
+              <Link
+                href="/contract"
                 className="rounded-md bg-emerald-50 px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
               >
                 Get started
-              </a>
-              <a
-                href="#"
-                className="text-sm font-semibold leading-6 text-white"
-              >
-                Learn more <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="relative mt-16 lg:mt-8">

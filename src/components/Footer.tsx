@@ -47,7 +47,7 @@ const navigation = {
     },
     {
       name: "GitHub",
-      href: "#",
+      href: "https://github.com/joshua-v-dev",
       icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
         <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
           <path
@@ -106,7 +106,7 @@ export default function Footer() {
           ))}
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; 2023 JV Labs, LLC. All rights reserved.
+          &copy; {new Date().getFullYear()} Joshua Vaughn.
         </p>
       </div>
     </footer>
