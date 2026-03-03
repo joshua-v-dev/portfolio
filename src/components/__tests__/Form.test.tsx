@@ -7,7 +7,7 @@ describe("Form", () => {
   it("renders the heading", () => {
     render(<Form />);
     expect(
-      screen.getByRole("heading", { name: /hello world/i })
+      screen.getByRole("heading", { name: /hello world/i }),
     ).toBeInTheDocument();
   });
 

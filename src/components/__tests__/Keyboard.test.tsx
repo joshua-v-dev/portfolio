@@ -6,7 +6,7 @@ describe("Keyboard", () => {
   it("renders the instruction heading", () => {
     render(<Keyboard />);
     expect(
-      screen.getByRole("heading", { name: /try typing on a key/i })
+      screen.getByRole("heading", { name: /try typing on a key/i }),
     ).toBeInTheDocument();
   });
 

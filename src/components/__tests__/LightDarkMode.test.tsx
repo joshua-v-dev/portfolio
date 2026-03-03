@@ -16,7 +16,7 @@ describe("LightDarkMode", () => {
   it("renders a toggle button with correct aria-label", () => {
     render(<LightDarkMode />);
     expect(
-      screen.getByRole("button", { name: /toggle dark mode/i })
+      screen.getByRole("button", { name: /toggle dark mode/i }),
     ).toBeInTheDocument();
   });
 

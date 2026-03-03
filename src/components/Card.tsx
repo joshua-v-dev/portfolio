@@ -1,8 +1,8 @@
-import {clsx} from "clsx";
-import React from "react";
+import { clsx } from "clsx";
+import type React from "react";
 // import Link from "next/link";
-import type {HTMLAttributes,JSX} from "react";
-import {ComponentType} from "react";
+import type { ComponentType, HTMLAttributes, JSX } from "react";
+
 // import type {SVGProps} from "react";
 
 // const ChevronRightIcon = (
@@ -48,10 +48,7 @@ export function Card({
   );
 }
 
-Card.Link = function CardLink({
-  // children,
-  // ...props
-}: {
+Card.Link = function CardLink(_props: {
   children: React.ReactNode;
   href: string;
 }) {
@@ -87,9 +84,7 @@ Card.Title = function CardTitle({
   );
 };
 
-Card.Description = function CardDescription({
-  // children,
-}: {
+Card.Description = function CardDescription(_props: {
   children: React.ReactNode;
 }) {
   return (
@@ -128,7 +123,7 @@ Card.Eyebrow = function CardEyebrow({
       className={clsx(
         className,
         "relative z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500",
-        decorate && "pl-3.5"
+        decorate && "pl-3.5",
       )}
       {...props}
     >

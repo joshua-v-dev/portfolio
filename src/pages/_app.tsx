@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
+import type { AppType } from "next/app";
 import { ThemeProvider } from "next-themes";
-import { type AppType } from "next/app";
 import Container from "~/components/Container";
 import Footer from "~/components/Footer";
 import MobileMenu from "~/components/MobileMenu";

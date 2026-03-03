@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";
 
 type GuestbookEntry = {
   name: string;
@@ -10,7 +10,7 @@ export const entries = new Map<string, GuestbookEntry>();
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   if (req.method === "POST") {
     const { name, message } = req.body;
@@ -25,7 +25,7 @@ export default async function handler(
   if (req.method === "GET") {
     const entriesArray = Array.from(entries.values());
     const sortedEntries = entriesArray.sort(
-      (a, b) => b.timestamp - a.timestamp
+      (a, b) => b.timestamp - a.timestamp,
     );
     return res.status(200).json({ entries: sortedEntries });
   }

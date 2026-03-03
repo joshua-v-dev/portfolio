@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "noUncheckedIndexedAccess": true,
     "allowJs": true,
     "strict": true,
@@ -36,9 +32,7 @@
     "alwaysStrict": true,
     "skipLibCheck": true,
     "paths": {
-      "~/*": [
-        "src/*"
-      ]
+      "~/*": ["src/*"]
     }
   },
   "include": [
@@ -51,9 +45,7 @@
     "tailwind.config.js",
     "next.config.mjs"
   ],
-  "exclude": [
-    "node_modules"
-  ],
+  "exclude": ["node_modules"],
   "ct3a_metadata": {
     "init_version": "5.4.0"
   }

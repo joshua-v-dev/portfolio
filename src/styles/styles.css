@@ -54,7 +54,7 @@ header {
   min-height: 100vh;
   color: var(--color-white);
   overflow: hidden;
-  padding: 0 !important;
+  padding: 0;
 }
 
 section {
@@ -546,8 +546,8 @@ section {
   justify-content: space-between;
 }
 .contact-content-con .left-contact .contact-info .contact-item p {
-  margin: 0.3rem 0 !important;
-  padding: 0 !important;
+  margin: 0.3rem 0;
+  padding: 0;
 }
 .contact-content-con .left-contact .contact-info .contact-item .icon {
   display: grid;
@@ -697,7 +697,7 @@ section {
 
 @media screen and (max-width: 600px) {
   header {
-    padding: 0 !important;
+    padding: 0;
   }
 
   .theme-btn {
@@ -716,12 +716,12 @@ section {
 
   .right-header {
     grid-row: 1;
-    padding-right: 0rem !important;
+    padding-right: 0rem;
     width: 90%;
     margin: 0 auto;
   }
   .right-header .name {
-    font-size: 2.5rem !important;
+    font-size: 2.5rem;
     text-align: center;
     padding-top: 3rem;
   }
@@ -765,7 +765,7 @@ section {
   }
 
   .container {
-    padding: 2rem 2.5rem !important;
+    padding: 2rem 2.5rem;
   }
 
   .about-stats .progress-bars {
@@ -918,18 +918,18 @@ section {
     display: none;
   }
   .left-header .image {
-    width: 90% !important;
-    margin: 0 auto !important;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .right-header {
     grid-row: 1;
-    padding-right: 0rem !important;
+    padding-right: 0rem;
     width: 90%;
     margin: 0 auto;
   }
   .right-header .name {
-    font-size: 2.5rem !important;
+    font-size: 2.5rem;
     text-align: center;
     padding-top: 3rem;
   }

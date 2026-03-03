@@ -1,7 +1,7 @@
 import { animate } from "popmotion";
 import { useEffect } from "react";
 import fetcher from "~/lib/fetcher";
-import { NowPlayingSong } from "~/lib/types";
+import type { NowPlayingSong } from "~/lib/types";
 
 const AnimatedBars = () => {
   useEffect(() => {
@@ -34,9 +34,9 @@ const AnimatedBars = () => {
       animateBar1.stop();
       animateBar2.stop();
       animateBar3.stop();
-      bar1 && bar1.style.removeProperty("transform");
-      bar2 && bar2.style.removeProperty("transform");
-      bar3 && bar3.style.removeProperty("transform");
+      bar1?.style.removeProperty("transform");
+      bar2?.style.removeProperty("transform");
+      bar3?.style.removeProperty("transform");
     };
   }, []);
 

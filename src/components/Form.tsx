@@ -1,4 +1,4 @@
-import { useState, ChangeEvent } from "react";
+import { type ChangeEvent, useState } from "react";
 
 export default function Form() {
   const [selectValue, setSelectValue] = useState("coconut");

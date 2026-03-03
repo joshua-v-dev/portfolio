@@ -6,7 +6,7 @@ describe("Button", () => {
   it("renders a learn more button", () => {
     render(<Button />);
     expect(
-      screen.getByRole("button", { name: /learn more/i })
+      screen.getByRole("button", { name: /learn more/i }),
     ).toBeInTheDocument();
   });
 });

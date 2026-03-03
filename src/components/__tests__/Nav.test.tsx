@@ -56,30 +56,30 @@ describe("Nav", () => {
     expect(screen.getByText("Home").closest("a")).toHaveAttribute("href", "/");
     expect(screen.getByText("Services").closest("a")).toHaveAttribute(
       "href",
-      "/services"
+      "/services",
     );
     expect(screen.getByText("Products").closest("a")).toHaveAttribute(
       "href",
-      "/products"
+      "/products",
     );
     expect(screen.getByText("Contract").closest("a")).toHaveAttribute(
       "href",
-      "/contract"
+      "/contract",
     );
     expect(screen.getByText("Gallery").closest("a")).toHaveAttribute(
       "href",
-      "/gallery"
+      "/gallery",
     );
     expect(screen.getByText("Future").closest("a")).toHaveAttribute(
       "href",
-      "/future"
+      "/future",
     );
   });
 
   it("renders the dark mode toggle button", () => {
     render(<Nav />);
     expect(
-      screen.getByRole("button", { name: /toggle dark mode/i })
+      screen.getByRole("button", { name: /toggle dark mode/i }),
     ).toBeInTheDocument();
   });
 });

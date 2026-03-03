@@ -56,7 +56,7 @@ describe("MobileMenu", () => {
   it("renders the toggle button", () => {
     render(<MobileMenu />);
     expect(
-      screen.getByRole("button", { name: /toggle menu/i })
+      screen.getByRole("button", { name: /toggle menu/i }),
     ).toBeInTheDocument();
   });
 
@@ -90,11 +90,11 @@ describe("MobileMenu", () => {
     expect(screen.getByText("Home").closest("a")).toHaveAttribute("href", "/");
     expect(screen.getByText("Products").closest("a")).toHaveAttribute(
       "href",
-      "/products"
+      "/products",
     );
     expect(screen.getByText("Services").closest("a")).toHaveAttribute(
       "href",
-      "/services"
+      "/services",
     );
   });
 });

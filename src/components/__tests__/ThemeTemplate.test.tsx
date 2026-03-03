@@ -15,21 +15,21 @@ describe("ThemeTemplate", () => {
     expect(
       screen.getByRole("heading", {
         name: /digital business starter kit/i,
-      })
+      }),
     ).toBeInTheDocument();
   });
 
   it("renders the product price in the pay button", () => {
     render(<ThemeTemplate />);
     expect(
-      screen.getByRole("button", { name: /pay \$2,200/i })
+      screen.getByRole("button", { name: /pay \$2,200/i }),
     ).toBeInTheDocument();
   });
 
   it("renders a learn more button", () => {
     render(<ThemeTemplate />);
     expect(
-      screen.getByRole("button", { name: /learn more/i })
+      screen.getByRole("button", { name: /learn more/i }),
     ).toBeInTheDocument();
   });
 
@@ -37,8 +37,8 @@ describe("ThemeTemplate", () => {
     render(<ThemeTemplate />);
     expect(
       screen.getByText(
-        /startup starter kit is a boilerplate for building saas applications/i
-      )
+        /startup starter kit is a boilerplate for building saas applications/i,
+      ),
     ).toBeInTheDocument();
   });
 
