@@ -1,32 +1,25 @@
 import { Analytics } from "@vercel/analytics/react";
-import { Session } from "inspector";
-import { SessionProvider } from "next-auth/react";
+import type { AppType } from "next/app";
 import { ThemeProvider } from "next-themes";
-import { type AppType } from "next/app";
 import Container from "~/components/Container";
 import Footer from "~/components/Footer";
 import MobileMenu from "~/components/MobileMenu";
 import Nav from "~/components/Nav";
 import "../styles/main.css";
 
-const MyApp: AppType<{ session: Session }> = ({
-  Component,
-  pageProps: { session, ...pageProps },
-}) => {
+const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <>
-      <SessionProvider>
-        <Container>
-          <ThemeProvider attribute="class">
-            <MobileMenu />
-            <Nav />
+      <Container>
+        <ThemeProvider attribute="class">
+          <MobileMenu />
+          <Nav />
 
-            <Component {...pageProps} />
+          <Component {...pageProps} />
 
-            <Footer />
-          </ThemeProvider>
-        </Container>
-      </SessionProvider>
+          <Footer />
+        </ThemeProvider>
+      </Container>
       <Analytics />
     </>
   );

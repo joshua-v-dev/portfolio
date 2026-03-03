@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-import defaultTheme from "tailwindcss/defaultTheme";
+
 import plugin from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 export const content = ["./src/**/*.{js,ts,jsx,tsx, html}"];
 export const theme = {
@@ -54,7 +55,6 @@ export const theme = {
         neutralBg: "var(--neutralBg)",
         onPrimaryBg: "var(--onPrimaryBg)",
         primaryBg: "var(--primaryBg)",
-        primary: "var(--primary)",
         secondary: "var(--secondary)",
         onSecondaryBg: "var(--onSecondaryBg)",
         secondaryBg: "var(--secondaryBg)",
@@ -307,7 +307,6 @@ export const theme = {
       150: "1.5",
       200: "2",
     },
-    divideColor: ({ theme }) => theme("colors"),
     content: {
       none: "none",
     },
@@ -1034,7 +1033,7 @@ export const theme = {
     "disabled",
   ],
   plugins: [
-    plugin(function ({ addUtilities, addComponents, e, config }) {
+    plugin(({ addUtilities, addComponents, e, config }) => {
       const newUtilities = {
         ".container": {
           width: "100%",

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { ForwardedRef, ReactNode, forwardRef } from "react";
+import { type ForwardedRef, forwardRef, type ReactNode } from "react";
 
 const OuterContainer = forwardRef<
   HTMLDivElement,
@@ -33,7 +33,7 @@ export const Container = forwardRef(function Container(
     children,
     ...props
   }: { children?: ReactNode; className?: string },
-  ref: ForwardedRef<HTMLDivElement>
+  ref: ForwardedRef<HTMLDivElement>,
 ) {
   return (
     <OuterContainer ref={ref} {...props}>

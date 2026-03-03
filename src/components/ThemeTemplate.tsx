@@ -26,7 +26,7 @@ const license = {
     <p> Apps and services for any type of business or project. Personal and professional use.</p>
     
     <ul role="list">
-    <li>You\'re allowed to use your product as legally you see fit.</li>
+    <li>You're allowed to use your product as legally you see fit.</li>
     <li>Attribution is not required to use the template</li>
     </ul>
     
@@ -37,11 +37,11 @@ const license = {
     <li> You may transfer ownership</li>
     </ul>
     
-    <h4>What you can\'t do with it</h4>
+    <h4>What you can't do with it</h4>
     
     <ul role="list">
-    <li>Don\'t be greedy.</li>
-    <li>Don\'t be evil. </li>
+    <li>Don't be greedy.</li>
+    <li>Don't be evil. </li>
     </ul>
   `,
 };

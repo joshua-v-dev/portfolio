@@ -1,10 +1,6 @@
 import Recruiter from "~/components/Recruiter";
 
 const RecruiterPage = () => {
-  return (
-    <>
-      <Recruiter />
-    </>
-  );
+  return <Recruiter />;
 };
 export default RecruiterPage;

@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { staggerContainer } from "../utils/motion";
 import { classNames } from "~/lib/constants";
+import { staggerContainer } from "../utils/motion";
 
 const StarWrapper = (Component: any, idName: string | undefined) => {
-  const HOC = () => {
+  const _HOC = () => {
     // return function HOC() {
     return (
       <motion.section
-        variants={staggerContainer(Component, HOC)}
+        variants={staggerContainer(Component, _HOC)}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
