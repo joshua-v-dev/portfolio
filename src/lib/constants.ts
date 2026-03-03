@@ -120,7 +120,7 @@ export const tiers = [
   {
     name: "E-Commerce",
     id: "tier-freelancer",
-    href: "/",
+    href: "/contract",
     price: [{ monthly: "$25", annually: "$250" }],
     description: "The essentials to provide your best work for customers.",
     features: [
@@ -137,7 +137,7 @@ export const tiers = [
   {
     name: "SPA/MPA",
     id: "tier-startup",
-    href: "/",
+    href: "/contract",
     price: [{ monthly: "$40", annually: "$400" }],
     description: "A plan that scales with your rapidly growing business.",
     features: [
@@ -155,7 +155,7 @@ export const tiers = [
   {
     name: "CMS",
     id: "tier-enterprise",
-    href: "/",
+    href: "/contract",
     price: [{ monthly: "$50", annually: "$500" }],
     description: "Dedicated support and infrastructure for your company.",
     features: [
