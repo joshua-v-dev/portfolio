@@ -4,7 +4,7 @@ export default function Form() {
   const [selectValue, setSelectValue] = useState("coconut");
 
   const handleSubmit = () => {
-    console.log("Form was submitted!");
+    // TODO: implement form submission
   };
 
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
